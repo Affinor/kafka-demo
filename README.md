@@ -1,6 +1,8 @@
-ngx_kafka_module+Kafka搭建步骤
-##一、安装nginx
-##二、安装zookeeper
+### ngx_kafka_module+Kafka搭建步骤
+
+#### 一、安装nginx
+
+#### 二、安装zookeeper
 
 ~~~
 tar -zxf zookeeper-3.4.14.tar.gz -C /opt cd /opt/zookeeper-3.4.14/conf 
@@ -11,7 +13,7 @@ vim zoo.cfg
 zkServer.sh start 
 ~~~
 
-##三、安装kafka
+#### 三、安装kafka
 
 ~~~
 tar -zxf kafka_2.12-1.0.2.tgz -C /opt
@@ -20,8 +22,9 @@ vim /etc/profile
 sh kafka-server-start.sh -daemon ../config/server.properties 
 ~~~
 
-##四、安装ngx_kafka_module
-1、安装 librdkafka
+#### 四、安装ngx_kafka_module
+
+##### 1、安装 librdkafka
 
 ~~~
 git clone https://github.com/edenhill/librdkafka
@@ -31,7 +34,7 @@ make
 sudo make install
 ~~~
 
-2、添加ngx_kafka_module
+##### 2、添加ngx_kafka_module
 
 ~~~
 git clone https://github.com/brg-liuwei/ngx_kafka_module
@@ -44,7 +47,7 @@ make
 sudo make install
 ~~~
 
-3、配置nginx
+##### 3、配置nginx
 
 ~~~
 server {
